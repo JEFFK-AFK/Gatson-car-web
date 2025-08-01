@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Auto Assist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <header class="bg-blue-600 text-white p-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Mobile Auto Assist</h1>
+      <nav>
+        <a href="#services" class="mx-2 hover:underline">Services</a>
+        <a href="#how" class="mx-2 hover:underline">How It Works</a>
+        <a href="#book" class="mx-2 hover:underline bg-white text-blue-600 px-4 py-2 rounded">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="text-center py-20 bg-gradient-to-br from-blue-500 to-blue-700 text-white">
+    <h2 class="text-4xl font-bold mb-4">Car Trouble? We'll Come to You.</h2>
+    <p class="text-lg mb-6">Book an expert engineer to your location with just a few questions.</p>
+    <a href="#book" class="bg-white text-blue-600 px-6 py-3 rounded shadow hover:bg-gray-100">Get Started</a>
+  </section>
+
+  <section id="how" class="p-10 bg-white">
+    <h3 class="text-2xl font-bold text-center mb-6">How It Works</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div><h4 class="font-bold">1. Tell us the issue</h4><p>Answer a few quick questions about your car problem.</p></div>
+      <div><h4 class="font-bold">2. We dispatch an expert</h4><p>Our qualified engineer comes to your location.</p></div>
+      <div><h4 class="font-bold">3. Get serviced + free wash</h4><p>If you visit our garage, enjoy a free car wash!</p></div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-gray-100 p-10">
+    <h3 class="text-2xl font-bold text-center mb-6">Our Services</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded shadow">✅ Checkups</div>
+      <div class="bg-white p-4 rounded shadow">🔧 Consultations</div>
+      <div class="bg-white p-4 rounded shadow">⚡ Electrical Problems</div>
+      <div class="bg-white p-4 rounded shadow">✨ Vehicle Detailing</div>
+      <div class="bg-white p-4 rounded shadow">🛠️ General Service</div>
+    </div>
+  </section>
+
+  <section id="book" class="p-10 bg-white text-center">
+    <h3 class="text-2xl font-bold mb-6">Start Your Booking</h3>
+    <form action="submit-form.php" method="POST" class="max-w-md mx-auto text-left">
+      <label class="block mb-2 font-semibold">What's the issue?</label>
+      <select name="service" class="w-full mb-4 p-2 border rounded" required>
+        <option disabled selected>Select a service</option>
+        <option value="checkup">Checkup</option>
+        <option value="consultation">Consultation</option>
+        <option value="electrical">Electrical Problem</option>
+        <option value="detailing">Vehicle Detailing</option>
+        <option value="service">General Service</option>
+      </select>
+
+      <label class="block mb-2 font-semibold">Car Location</label>
+      <input type="text" name="location" class="w-full mb-4 p-2 border rounded" placeholder="e.g., Westlands, Nairobi" required>
+
+      <label class="block mb-2 font-semibold">Contact Number</label>
+      <input type="tel" name="phone" class="w-full mb-4 p-2 border rounded" required>
+
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit Request</button>
+    </form>
+  </section>
+
+  <footer class="bg-gray-800 text-white p-6 text-center">
+    <p>Visit our main garage for a free car wash after service!</p>
+    <p>&copy; 2025 Mobile Auto Assist</p>
+  </footer>
+
+</body>
+</html>
